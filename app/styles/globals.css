@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+--bg: #0b0d10;
+--muted: #94a3b8;
+}
+
+
+html, body, #__next {
+height: 100%;
+}
+
+
+body {
+background: var(--bg);
+color: white;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+
+/* shimmer */
+@keyframes shimmer { 0%{ background-position: -200px 0 } 100%{ background-position: 200px 0 }}
+.animate-shimmer { background: linear-gradient(90deg,#111,#1a1a1a,#111); background-size: 400px 100%; animation: shimmer 1.2s infinite }
